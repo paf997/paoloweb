@@ -1,0 +1,93 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+
+body, html {
+  font-family: 'Ubuntu', sans-serif;
+  font-weight: 400;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  background-color:#0A1612;
+}
+
+a{
+  color:#D9D9D9;
+  text-decoration: none;
+  transition: color .3ms ease-in-out;
+}
+
+a:focus{
+  color:/*#77C9D4;*/#4484ce;
+}
+
+a:hover{
+  transition: color .1s ease-in-out;
+  color:#77C9D4;
+}
+
+.welcome{
+  color:/*#CF6766;*/#57BC90;
+  font-size: 36px;
+  padding:0 2rem;
+}
+
+.ciao{
+  font-size: 36px;
+}
+
+.dark{
+  background-color: black;
+}
+
+.light{
+  background-color: white;
+}
+
+
+.header,.footer{
+  padding:2rem; 
+  display:flex;
+  justify-content:flex-end;
+  column-gap:15px;
+  row-gap:10px;
+  color:#D9D9D9;
+}
+
+.footer{
+
+}
+
+#card_div{
+  width:100%;
+  display:flex;
+  justify-content: space-around;
+  border-top: 2px solid #77C9D4;
+  border-bottom: 2px solid #77C9D4;
+  padding:2rem;
+}
+
+.card{
+  border-radius: 5px;
+  padding:1rem;
+  background-color:#77C9D4;
+  opacity:.2;
+  display:flex;
+  flex-direction: column;
+  color:white;
+  height: 200px;
+  width: 300px;
+  transition: all .5s ease-in-out;
+  align-items: center;
+}
+
+.card:hover{
+  opacity:1.0;
+}
+
+.card>a{
+  color:#F53240;
+}
+
+.card_details{
+  font-weight:300;
+  font-size:14px;
+}
+
