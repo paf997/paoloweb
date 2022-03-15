@@ -4,10 +4,12 @@ import './App.css';
 function Header(props) {
 
     return(
-      <header className={"header"}>
-        <a href="http://localhost:3000/#card_div">my_work()</a>
-        <a href="https://docs.google.com/document/d/1PPsxCbuu3FZbL6a1WiCNogNH-9vhP5HBu5BIyeYd0ao/edit?usp=sharing">my_resume()</a>
-        <a href="#">contact_me()</a>
+      <header className="header">
+        <div className="header_links">
+          <a href="http://localhost:3000/#previous_work">my_work()</a>
+          <a href="https://docs.google.com/document/d/1w_tLtpewcCtmsDi7QdWw3OTDlSoLP_HM/edit?usp=sharing&ouid=118314119832464886972&rtpof=true&sd=true">my_resume()</a>
+          <a href="http://localhost:3000/#contact">contact_me()</a>
+        </div>
       </header>
     )
 }
