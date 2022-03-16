@@ -71,7 +71,7 @@ textarea, input, .submit{
 .top{
   font-size: 48px;
   position:relative;
-  height:500px;
+  height:750px;
 }
 
 .color-mode{
@@ -135,8 +135,8 @@ to {left:25%; transform:rotate(360deg)}
 }
 
 .thanks{
-  height:250px;
-  width:250px;
+  height:225px;
+  width:225px;
   background-color: var(--red-theme);
   animation-duration:1s;
   animation-delay: 2s;
@@ -163,6 +163,7 @@ to {left:25%; transform:rotate(360deg)}
   column-gap:15px;
   row-gap:10px;
   background-color: rgba(217, 217, 217,.2);
+  font-weight: 800;
 }
 
 .header{
@@ -189,14 +190,14 @@ to {left:25%; transform:rotate(360deg)}
 
 @keyframes header {
   from{ left:100%}
-  to{left:70%}
+  to{left:65%}
 }
 
 #previous_work{
   border-top: 2px solid var(--theme-main);
   border-bottom: 2px solid var(--theme-main);
   padding:2rem 0;
-  background-color: var(--theme-light);
+  background-color: var(--aluminium);
 }
 
 .card_div{
@@ -210,7 +211,7 @@ to {left:25%; transform:rotate(360deg)}
   border-radius: 5px;
   padding:1rem;
   background-color:#77C9D4;
-  opacity:.2;
+  opacity:.5;
   display:flex;
   flex-direction: column;
   color:white;

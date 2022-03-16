@@ -44,8 +44,8 @@ function Home (props) {
         <button className="color-mode" onClick={switch_color_modes}></button>
         <div className="welcome top">
             <p className="ciao">Ciao</p>
-            <p className="myname">My Name Is Paolo</p>
-            <p className="thanks">Thanks For Visiting</p>
+            <p className="myname">I am</p>
+            <p className="thanks">Paolo</p>
         </div>
         <div id="previous_work">
             <div className="welcome"> Previous Work</div>
