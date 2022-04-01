@@ -5,6 +5,7 @@ import Footer from './Footer';
 import Card from './Card';
 import axios from "axios";
 import useForm  from './useForm';
+import beachPic from './beach_graffiti_alghero.jpeg';
 
 function Home (props) {
 
@@ -41,12 +42,15 @@ function Home (props) {
     return(
     <div className={color_mode ? "dark":"light"}>
         <Header></Header>
-        <button className="color-mode" onClick={switch_color_modes}></button>
-        <div className="welcome top">
+        {/*<button className="color-mode" onClick={switch_color_modes}></button>*/}
+        <div className="top">
+            <img class="beach-photo" alt="beach-altered" src={beachPic}/>
             <p className="ciao">Ciao</p>
             <p className="myname">I am</p>
             <p className="thanks">Paolo</p>
+            <p id="about">I'm A Web Developer</p>
         </div>
+
         <div id="previous_work">
             <div className="welcome"> Previous Work</div>
             <div className="card_div">

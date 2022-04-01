@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import './App.css';
+import PieChart from './PieChart';
 
 function Card (props) {
 
@@ -9,6 +10,7 @@ function Card (props) {
             <h3>{props.text}</h3>
             <p className="card_details">{props.details}</p>
             <a href={props.link}>click to see more</a>
+    
         </div>
 
     )

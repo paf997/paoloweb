@@ -15,6 +15,38 @@
 --yellow:#F9CF00;
 --tangerine:#F19F4D;
 --aluminium:#D9D9D9;
+
+--aqua:#008F95;
+--mustard:#E9B000;
+--papaya:#E24E42;
+
+--warm-peach:#E24E42;
+--summer-sky:#286DA8;
+--field:#B37D4E;
+--breeze:#438496;
+
+--clean:#A7D2CB;
+--butter:#F2D388;
+--salmon:#C98474;
+--eggplant:#874C62;
+
+--fresh:#F7EF6A;
+--vermillion:#93C178;
+--sunshine:#465C8B;
+--clean:#DFDCE3;
+--pink-purple:rgba(237, 164, 230,.8);
+
+--denim:#1A2930;
+
+--cerulean:#7A9D96;
+
+--main-green:var(--denim);
+--light-blue:rgba(40, 109, 168, .9);
+--main-yellow:var(--yellow);
+--main-orange:var(--salmon);
+--alt-background:rgba(40, 109, 168, .9);
+--alt-text:var(--denim);
+
 }
 
 body, html {
@@ -26,17 +58,17 @@ body, html {
 }
 
 a{  
-  color:var(--theme-main);;
+  color:var(--alt-text);
   text-decoration: none;
   transition: color .3ms ease-in-out;
 }
 
 a:focus{
-  color:/*#77C9D4;*/ var(--theme-complement);
+  color:/*#77C9D4;*/ var(--warm-peach);
 }
 
 a:hover{
-  color:var(--theme-complement);
+  color:var(--warm-peach);
   transition: color .1s ease-in-out;
 }
 
@@ -59,7 +91,7 @@ textarea, input, .submit{
 }
 
 .welcome{
-  color:/*#CF6766;*/var(--theme-main);
+  color:/*#CF6766;*/var(--alt-text);
   font-size: 36px;
   padding:0 2rem;
 }
@@ -68,10 +100,24 @@ textarea, input, .submit{
   color:/*#CF6766;*/var(--theme-main);
 }
 
+.beach-photo{
+  width:100%;
+  height:100%;
+  object-fit: fill;
+  color:black;
+}
+
 .top{
+  color:/*#CF6766;*/var(--alt-text);
   font-size: 48px;
+  height:1400px;
+  width:100%;
   position:relative;
-  height:750px;
+  /*background-image: url('beach_graffiti_alghero.jpeg');*/
+  /*background-image: url('beach_graffiti_alghero.png');
+  object-fit: contain;
+  background-size: contain;*/
+  background-repeat:no-repeat;
 }
 
 .color-mode{
@@ -96,7 +142,25 @@ textarea, input, .submit{
   justify-content: center;
   align-items: center;
   position:absolute;
-  color:var(--blue-theme);
+  color:var(--light-blue);
+  opacity: .9;
+  background-color: var(--main-yellow);
+}
+
+#about{
+  position: absolute;
+  background-color: greenyellow;
+  opacity:.8;
+  left:2%;
+  top:50%;
+  border-radius: 20px;
+  padding:1rem;
+  font-size: 24px;
+  height:50px;
+  width:auto;
+  align-items: center;
+  justify-content: center;
+  
 }
 
 @keyframes ciao {
@@ -105,7 +169,7 @@ textarea, input, .submit{
 }
 
 .ciao{
-  background-color: var(--red-theme);
+  top:0;
   animation-name: ciao;
   animation-duration:1s;
   animation-fill-mode:forwards;
@@ -119,9 +183,8 @@ textarea, input, .submit{
 .myname{
   height:300px;
   width:300px;
-  background-color: var(--red-theme);
   top:2%;
-  left:55%;
+  left:50%;
   animation-duration:2s;
   animation-delay: 1s;
   animation-name: welcome;
@@ -137,14 +200,13 @@ to {left:25%; transform:rotate(360deg)}
 .thanks{
   height:225px;
   width:225px;
-  background-color: var(--red-theme);
   animation-duration:1s;
   animation-delay: 2s;
   animation-name: thanks;
   animation-fill-mode:forwards;
   font-size: 40px;
   left:-30%;
-  top:30%;
+  top:20%;
 }
 
 .dark{
@@ -162,7 +224,7 @@ to {left:25%; transform:rotate(360deg)}
   justify-content:flex-end;
   column-gap:15px;
   row-gap:10px;
-  background-color: rgba(217, 217, 217,.2);
+  background-color: rgba(197, 193, 192, .2);
   font-weight: 800;
 }
 
@@ -197,7 +259,8 @@ to {left:25%; transform:rotate(360deg)}
   border-top: 2px solid var(--theme-main);
   border-bottom: 2px solid var(--theme-main);
   padding:2rem 0;
-  background-color: var(--aluminium);
+  background-color: var(--alt-background);
+  color:black;
 }
 
 .card_div{
@@ -210,8 +273,8 @@ to {left:25%; transform:rotate(360deg)}
 .card{
   border-radius: 5px;
   padding:1rem;
-  background-color:#77C9D4;
-  opacity:.5;
+  background-color:var(--main-green);
+  opacity:.75;
   display:flex;
   flex-direction: column;
   color:white;
@@ -241,15 +304,15 @@ to {left:25%; transform:rotate(360deg)}
   row-gap: 10px;
   column-gap: 10px;
   width:90%;
-  background-color: var(--theme-blue-trans);/*#2B7C87*/;
+  background-color: rgba(26, 41, 48, .6);/*#2B7C87*/;
   padding: 2rem;
   margin-top: 10px;
-  opacity:.2;
+  opacity:.9;
   transition: all .5s ease-in-out;
 }
 
 .form:hover{
-  opacity:1.0;
+  opacity:.9;
 }
 
 .name, .email, .msg, .submit{
@@ -278,9 +341,16 @@ to {left:25%; transform:rotate(360deg)}
   padding:2rem 0;
 }
 
+.pie-chart{
+  height:100px;
+  width:100px;
+  border-radius: 50%;
+  background: conic-gradient(blue 50.00%, red 50.00%, black);
+}
+
 @keyframes welcome {
   from{ opacity:0}
-  to{opacity:1}
+  to{opacity:.9}
   
 }
 
