@@ -6,6 +6,7 @@ import Card from './Card';
 import axios from "axios";
 import useForm  from './useForm';
 import beachPic from './beach_graffiti_alghero.jpeg';
+import dymaco from './dymaco-card-pic.png';
 
 function Home (props) {
 
@@ -48,26 +49,36 @@ function Home (props) {
             <p className="ciao">Ciao</p>
             <p className="myname">I am</p>
             <p className="thanks">Paolo</p>
-            <p id="about">I'm A Web Developer</p>
+            <div id="about">
+                <p className="about-1">I am a Progammer and Web Developer</p>
+                <p className="about-2 blue_bgc_white_txt">Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
+                Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, 
+                when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, 
+                but also the leap into electronic typesetting, remaining essentially unchanged. </p>
+            </div>
         </div>
 
         <div id="previous_work">
-            <div className="welcome"> Previous Work</div>
-            <div className="card_div">
-                <Card text={"Dymaco"}
-                    details={"Programed the entire website and created WP theme. Used HTML, CSS, Javascript and PHP"}
-                    link={"https://www.dymaco.ca/"}>
-                </Card>
-                <Card text={"OCS"}
-                    details={"Contributed a number of components including header, footer and animated block on home page. Used HTML, CSS, PHP, and Flynt"}           
-                    link={"https://ottawachoralsociety.com/"}>
+            <div className="banner blue_bgc_white_txt">
+                <div className="welcome white_text"> Previous Work</div>
+                <div className="card_div">
+                    <Card text={"Dymaco"}
+                        details={"Programed the entire website and created WP theme. Used HTML, CSS, Javascript and PHP"}
+                        link={"https://www.dymaco.ca/"}
+                        bg_image={dymaco}>
                     </Card>
-                <Card text={"Ritorenllo"}
-                    details={"Programmed majority of website. Used HTML, CSS, PHP and Flynt"}
-                    link={"https://ritornello.ca/"}>
-                </Card>
+                    <Card text={"OCS"}
+                        details={"Contributed a number of components including header, footer and animated block on home page. Used HTML, CSS, PHP, and Flynt"}           
+                        link={"https://ottawachoralsociety.com/"}>
+                        </Card>
+                    <Card text={"Ritorenllo"}
+                        details={"Programmed majority of website. Used HTML, CSS, PHP and Flynt"}
+                        link={"https://ritornello.ca/"}>
+                    </Card>
+                </div>
              </div>
         </div>
+        {/*<div className="temp">underdevelopment</div>*/}
         <div id="contact">
             <div className="welcome">Contact Me
                 <form className="form" onSubmit={submit}>

@@ -76,8 +76,9 @@ textarea, input, .submit{
   outline:none;
   color:black;
   font-weight: 500;
-  border:2px solid var(--red-theme);
+  /*border:2px solid var(--red-theme);*/
   padding:1rem;
+  border:none;
   border-radius: 10px;
   background-color: white;
 }
@@ -93,7 +94,7 @@ textarea, input, .submit{
 .welcome{
   color:/*#CF6766;*/var(--alt-text);
   font-size: 36px;
-  padding:0 2rem;
+  padding:0 4rem;
 }
 
 .welcome-darker{
@@ -103,14 +104,14 @@ textarea, input, .submit{
 .beach-photo{
   width:100%;
   height:100%;
-  object-fit: fill;
+  object-fit:fill;
   color:black;
 }
 
 .top{
   color:/*#CF6766;*/var(--alt-text);
   font-size: 48px;
-  height:1400px;
+  height:800px;
   width:100%;
   position:relative;
   /*background-image: url('beach_graffiti_alghero.jpeg');*/
@@ -120,7 +121,7 @@ textarea, input, .submit{
   background-repeat:no-repeat;
 }
 
-.color-mode{
+/*.color-mode{
   border-radius:50%;
   height:20px;
   width:20px;
@@ -128,7 +129,7 @@ textarea, input, .submit{
   left:5%;
   top:10px;
   z-index:1;
-}
+}*/
 
 .ciao, .myname,.thanks{
   animation-name: welcome;
@@ -145,31 +146,45 @@ textarea, input, .submit{
   color:var(--light-blue);
   opacity: .9;
   background-color: var(--main-yellow);
+  margin: 10px;
 }
 
 #about{
-  position: absolute;
+  position:absolute;
+  left:55px;
+  top:460px;
+  display:flex;
+  flex-direction:column;
+}
+
+.about-1,.about-2{
   background-color: greenyellow;
-  opacity:.8;
-  left:2%;
-  top:50%;
+  display: inline;
+  width:fit-content;
+  opacity:.9;
   border-radius: 20px;
-  padding:1rem;
-  font-size: 24px;
-  height:50px;
-  width:auto;
-  align-items: center;
-  justify-content: center;
-  
+  padding:15px 25px;
+  font-size: 32px;
+  color:black;
+}
+
+.about-2{
+  /*background-color: var(--red-theme);*/
+  margin:0 80px;
+  top:540px;
+  width:70%;
+  font-size:18px;
+  padding: 2.5rem 2rem;
+  line-height: 1.2;
 }
 
 @keyframes ciao {
   from {left:-12%; transform: rotate(0deg)}
-  to {left:15%; transform:rotate(360deg)}
+  to {left:27%; transform:rotate(360deg)}
 }
 
 .ciao{
-  top:0;
+  top:30px;
   animation-name: ciao;
   animation-duration:1s;
   animation-fill-mode:forwards;
@@ -181,10 +196,10 @@ textarea, input, .submit{
 }*/
 
 .myname{
-  height:300px;
-  width:300px;
-  top:2%;
-  left:50%;
+  height:230px;
+  width:230px;
+  top:40px;
+  left:55%;
   animation-duration:2s;
   animation-delay: 1s;
   animation-name: welcome;
@@ -194,7 +209,7 @@ textarea, input, .submit{
 
 @keyframes thanks{
 from {left:-30%; transform: rotate(0deg)}
-to {left:25%; transform:rotate(360deg)}
+to {left:35%; transform:rotate(360deg)}
 }
 
 .thanks{
@@ -206,7 +221,7 @@ to {left:25%; transform:rotate(360deg)}
   animation-fill-mode:forwards;
   font-size: 40px;
   left:-30%;
-  top:20%;
+  top:170px;
 }
 
 .dark{
@@ -235,7 +250,6 @@ to {left:25%; transform:rotate(360deg)}
 }
 
 .footer{
-  border-top: 2px solid var(--theme-main);
 }
 
 .header_links{
@@ -256,24 +270,32 @@ to {left:25%; transform:rotate(360deg)}
 }
 
 #previous_work{
-  border-top: 2px solid var(--theme-main);
-  border-bottom: 2px solid var(--theme-main);
-  padding:2rem 0;
-  background-color: var(--alt-background);
+  margin-top:3rem 0;
+  /*border-top: 2px solid var(--theme-main);*/
+  padding:4rem 0;
+  background-color:white;
   color:black;
+}
+
+.banner{
+  padding:4rem 0;
 }
 
 .card_div{
   width:100%;
   display:flex;
   justify-content: space-around;
-  margin-top:2rem;
+  margin:2rem 0;
 }
 
 .card{
   border-radius: 5px;
-  padding:1rem;
+  /*padding:1rem;*/
   background-color:var(--main-green);
+  /*background-image:url('dymaco-card-pic.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: none;*/
   opacity:.75;
   display:flex;
   flex-direction: column;
@@ -282,6 +304,13 @@ to {left:25%; transform:rotate(360deg)}
   width: 300px;
   transition: all .5s ease-in-out;
   align-items: center;
+  position:relative;
+}
+
+.card_img{
+  height:100%;
+  width:100%;
+  object-fit: cover;
 }
 
 .card:hover{
@@ -304,8 +333,8 @@ to {left:25%; transform:rotate(360deg)}
   row-gap: 10px;
   column-gap: 10px;
   width:90%;
-  background-color: rgba(26, 41, 48, .6);/*#2B7C87*/;
-  padding: 2rem;
+  background-color: greenyellow;/*rgba(26, 41, 48, .6);/*#2B7C87*/;
+  opacity: .7;
   margin-top: 10px;
   opacity:.9;
   transition: all .5s ease-in-out;
@@ -317,7 +346,7 @@ to {left:25%; transform:rotate(360deg)}
 
 .name, .email, .msg, .submit{
   border-radius: 10px;
-  background-color: rgba(217, 217, 217,.9);
+  background-color:white;
 }
 
 .name{
@@ -338,7 +367,8 @@ to {left:25%; transform:rotate(360deg)}
 }
 
 #contact{
-  padding:2rem 0;
+  padding:4rem 0;
+  background-color:greenyellow;
 }
 
 .pie-chart{
@@ -351,6 +381,19 @@ to {left:25%; transform:rotate(360deg)}
 @keyframes welcome {
   from{ opacity:0}
   to{opacity:.9}
-  
+}
+
+.white_text{
+  color:white;
+}
+
+.blue_bgc_white_txt{
+  background-color: var(--light-blue);
+  color:white;
+}
+
+.temp{
+  width: 100%;
+  height:500px;
 }
 
