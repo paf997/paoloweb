@@ -74,8 +74,8 @@ a:hover{
 
 textarea, input, .submit{
   outline:none;
-  color:black;
-  font-weight: 500;
+  color:var(--denim);
+  font-weight: 700;
   /*border:2px solid var(--red-theme);*/
   padding:1rem;
   border:none;
@@ -88,12 +88,12 @@ textarea, input, .submit{
 }
 
 ::placeholder{
-  color:lightslategrey;
+  color:black;
 }
 
 .welcome{
   color:/*#CF6766;*/var(--alt-text);
-  font-size: 36px;
+  font-size:48px;
   padding:0 4rem;
 }
 
@@ -111,7 +111,7 @@ textarea, input, .submit{
 .top{
   color:/*#CF6766;*/var(--alt-text);
   font-size: 48px;
-  height:800px;
+  height:1300px;
   width:100%;
   position:relative;
   /*background-image: url('beach_graffiti_alghero.jpeg');*/
@@ -152,10 +152,12 @@ textarea, input, .submit{
 #about{
   position:absolute;
   left:55px;
-  top:460px;
+  top:58%;
   display:flex;
   flex-direction:column;
 }
+
+
 
 .about-1,.about-2{
   background-color: greenyellow;
@@ -163,18 +165,28 @@ textarea, input, .submit{
   width:fit-content;
   opacity:.9;
   border-radius: 20px;
-  padding:15px 25px;
+  padding:1rem 2rem;
   font-size: 32px;
   color:black;
+  opacity:.2;
+  animation-name: welcome;
+  animation-duration:3s;
+  animation-fill-mode:forwards;
+}
+
+@media (prefers-reduced-motion:no-preference){
+  .about-1{
+    transition:opacity 1.0s ease;
+    }
 }
 
 .about-2{
   /*background-color: var(--red-theme);*/
-  margin:0 80px;
+  margin:3rem 4rem;
   top:540px;
   width:70%;
   font-size:18px;
-  padding: 2.5rem 2rem;
+  padding: 3rem 2rem;
   line-height: 1.2;
 }
 
@@ -209,19 +221,21 @@ textarea, input, .submit{
 
 @keyframes thanks{
 from {left:-30%; transform: rotate(0deg)}
-to {left:35%; transform:rotate(360deg)}
+to {left:33%; transform:rotate(360deg)}
 }
 
 .thanks{
-  height:225px;
-  width:225px;
+  height:275px;
+  width:275px;
   animation-duration:1s;
   animation-delay: 2s;
   animation-name: thanks;
   animation-fill-mode:forwards;
   font-size: 40px;
   left:-30%;
-  top:170px;
+  top:16%;
+  font-size:68px
+
 }
 
 .dark{
@@ -234,7 +248,7 @@ to {left:35%; transform:rotate(360deg)}
 
 
 .header,.footer{
-  padding:2rem; 
+  padding:3rem; 
   display:flex;
   justify-content:flex-end;
   column-gap:15px;
@@ -266,26 +280,21 @@ to {left:35%; transform:rotate(360deg)}
 
 @keyframes header {
   from{ left:100%}
-  to{left:65%}
+  to{left:72%}
 }
 
 #previous_work{
-  margin-top:3rem 0;
   /*border-top: 2px solid var(--theme-main);*/
-  padding:4rem 0;
+  padding-top:4rem;
   background-color:white;
   color:black;
-}
-
-.banner{
-  padding:4rem 0;
 }
 
 .card_div{
   width:100%;
   display:flex;
-  justify-content: space-around;
-  margin:2rem 0;
+  justify-content: space-between;
+  margin:4rem 0;
 }
 
 .card{
@@ -300,15 +309,40 @@ to {left:35%; transform:rotate(360deg)}
   display:flex;
   flex-direction: column;
   color:white;
-  height: 200px;
-  width: 300px;
+  height: 300px;
+  width: 350px;
   transition: all .5s ease-in-out;
   align-items: center;
   position:relative;
+  column-gap: 5px;
+}
+
+.card_button{
+  width:65px;
+  height:65px;
+  border-radius:50%;
+  background-color:var(--denim);
+  position:absolute;
+  top:33%;
+  color:white;
+  z-index:200;
+  display:flex;
+  justify-content:center;
+  align-items: center;
+  transition: all .5s ease-in-out;
+  opacity:1.0;
+  border: 2px solid white;
+}
+
+.card_button:hover{
+  color:var(--denim);
+  border: 2px solid var(--denim);
+  background-color: white;
+  opacity:.6;
 }
 
 .card_img{
-  height:100%;
+  height:150px;
   width:100%;
   object-fit: cover;
 }
@@ -319,11 +353,14 @@ to {left:35%; transform:rotate(360deg)}
 
 .card>a{
   color:var(--red-theme);
+  padding-bottom:10px;
 }
 
 .card_details{
   font-weight:300;
-  font-size:14px;
+  font-size:12px;
+  text-align:center;
+  padding:.5rem;
 }
 
 .form{
@@ -333,7 +370,6 @@ to {left:35%; transform:rotate(360deg)}
   row-gap: 10px;
   column-gap: 10px;
   width:90%;
-  background-color: greenyellow;/*rgba(26, 41, 48, .6);/*#2B7C87*/;
   opacity: .7;
   margin-top: 10px;
   opacity:.9;
@@ -347,6 +383,9 @@ to {left:35%; transform:rotate(360deg)}
 .name, .email, .msg, .submit{
   border-radius: 10px;
   background-color:white;
+}
+.submit{
+  font-size:22px;
 }
 
 .name{
@@ -363,12 +402,18 @@ to {left:35%; transform:rotate(360deg)}
 
 .submit:hover{
   transition: all ease-in-out .8s;
-  background-color:var(--theme-clash)/* rgba(245, 50, 64, .8); */
+  background-color:var(--denim);/* rgba(245, 50, 64, .8); */
+  color:white;
 }
 
 #contact{
-  padding:4rem 0;
-  background-color:greenyellow;
+  padding:8rem 3rem;
+  /*background-color:greenyellow;*/
+  background-image: url('photos/sunset-gw.jpeg');
+  background-size: cover;
+  background-repeat:no-repeat;
+  background-position: center; 
+
 }
 
 .pie-chart{
@@ -385,15 +430,33 @@ to {left:35%; transform:rotate(360deg)}
 
 .white_text{
   color:white;
+  font-size: 48px;
+}
+
+.blue_bgc_white_txt,.green_bgc_denim_txt{
+  background-color: var(--light-blue);
+  color:white;
+  padding:2rem 2rem;
 }
 
 .blue_bgc_white_txt{
-  background-color: var(--light-blue);
-  color:white;
+  text-align: center;
 }
 
-.temp{
-  width: 100%;
-  height:500px;
+.green_bgc_denim_txt{
+  background-color: greenyellow;/*rgba(26, 41, 48, .6);/*#2B7C87*/;
+  color:var(--denim);
+  opacity:.9;
+  border-radius:15px;
+  padding:4rem 3rem;
+}
+
+.extra_padding{
+  padding:4rem 6rem;
+}
+
+.extra_vertical{
+  padding-top:2rem;
+  padding-bottom:2rem;
 }
 

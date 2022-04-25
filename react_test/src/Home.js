@@ -1,12 +1,14 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import './App.css';
 import Header from './Header';
 import Footer from './Footer';
 import Card from './Card';
 import axios from "axios";
 import useForm  from './useForm';
-import beachPic from './beach_graffiti_alghero.jpeg';
-import dymaco from './dymaco-card-pic.png';
+import beachPic from './photos/beach_graffiti_alghero.jpeg';
+import dymaco from './photos/dymaco.png';
+import ocs from './photos/OCS.png';
+import ritornello from './photos/ritornello.png';
 
 function Home (props) {
 
@@ -51,7 +53,7 @@ function Home (props) {
             <p className="thanks">Paolo</p>
             <div id="about">
                 <p className="about-1">I am a Progammer and Web Developer</p>
-                <p className="about-2 blue_bgc_white_txt">Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
+                <p className="about-2 blue_bgc_white_txt extra_padding">Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
                 Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, 
                 when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, 
                 but also the leap into electronic typesetting, remaining essentially unchanged. </p>
@@ -59,8 +61,9 @@ function Home (props) {
         </div>
 
         <div id="previous_work">
-            <div className="banner blue_bgc_white_txt">
-                <div className="welcome white_text"> Previous Work</div>
+            <div className="blue_bgc_white_txt banner">
+            <div className="extra_vertical">
+                <div className="white_text"> Previous Work</div>
                 <div className="card_div">
                     <Card text={"Dymaco"}
                         details={"Programed the entire website and created WP theme. Used HTML, CSS, Javascript and PHP"}
@@ -69,18 +72,21 @@ function Home (props) {
                     </Card>
                     <Card text={"OCS"}
                         details={"Contributed a number of components including header, footer and animated block on home page. Used HTML, CSS, PHP, and Flynt"}           
-                        link={"https://ottawachoralsociety.com/"}>
+                        link={"https://ottawachoralsociety.com/"}
+                        bg_image={ocs}>
                         </Card>
                     <Card text={"Ritorenllo"}
                         details={"Programmed majority of website. Used HTML, CSS, PHP and Flynt"}
-                        link={"https://ritornello.ca/"}>
+                        link={"https://ritornello.ca/"}
+                        bg_image={ritornello}>
                     </Card>
                 </div>
-             </div>
+            </div>
+            </div>
         </div>
-        {/*<div className="temp">underdevelopment</div>*/}
-        <div id="contact">
-            <div className="welcome">Contact Me
+        <div id="contact" className="welcome">
+            <div className="green_bgc_denim_txt">
+                <div>Contact Me</div>
                 <form className="form" onSubmit={submit}>
                     <input className="name"
                         type='text'
@@ -105,7 +111,7 @@ function Home (props) {
                         onChange={handleChange}
                     ></textarea>
 
-                    <button className="submit">submit</button>
+                    <button className="submit">submit()</button>
                 </form>
             </div>
         </div>
