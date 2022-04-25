@@ -157,7 +157,11 @@ textarea, input, .submit{
   flex-direction:column;
 }
 
-
+@media (min-width:768px){
+  #about{
+    left:10px;
+  }
+}
 
 .about-1,.about-2{
   background-color: greenyellow;
@@ -190,14 +194,25 @@ textarea, input, .submit{
   line-height: 1.2;
 }
 
-@keyframes ciao {
+@media (min-width:768px){
+  .about-2{
+    width:60%;
+  }
+}
+
+@keyframes ciao-full {
+  from {left:-12%; transform: rotate(0deg)}
+  to {left:27%; transform:rotate(360deg)}
+}
+
+@keyframes ciao-full {
   from {left:-12%; transform: rotate(0deg)}
   to {left:27%; transform:rotate(360deg)}
 }
 
 .ciao{
   top:30px;
-  animation-name: ciao;
+  animation-name: ciao-full;
   animation-duration:1s;
   animation-fill-mode:forwards;
 }
@@ -219,23 +234,33 @@ textarea, input, .submit{
   opacity:0;
 }
 
-@keyframes thanks{
+@keyframes thanks-full{
 from {left:-30%; transform: rotate(0deg)}
 to {left:33%; transform:rotate(360deg)}
 }
+
+@keyframes thanks-768{
+  from {left:-30%; transform: rotate(0deg)}
+  to {left:27%; transform:rotate(360deg)}
+  }
 
 .thanks{
   height:275px;
   width:275px;
   animation-duration:1s;
   animation-delay: 2s;
-  animation-name: thanks;
+  animation-name: thanks-full;
   animation-fill-mode:forwards;
   font-size: 40px;
   left:-30%;
   top:16%;
   font-size:68px
+}
 
+@media (min-width:768px){
+  .thanks{
+    animation-name: thanks-768;
+  }
 }
 
 .dark{
@@ -271,16 +296,27 @@ to {left:33%; transform:rotate(360deg)}
   column-gap:15px;
   position:absolute;
   left:100%;
-  animation-name: header;
+  animation-name: header-full;
   animation-fill-mode: forwards;
   animation-duration: 1s;
   animation-delay: 1s;
   bottom:40%;
 }
 
-@keyframes header {
+@media (min-width:768px){
+  .header_links{
+  animation-name:header-768;
+  }
+}
+
+@keyframes header-full {
   from{ left:100%}
-  to{left:72%}
+  to{left:68%}
+}
+
+@keyframes header-768 {
+  from{ left:100%}
+  to{left:55%}
 }
 
 #previous_work{
@@ -294,7 +330,14 @@ to {left:33%; transform:rotate(360deg)}
   width:100%;
   display:flex;
   justify-content: space-between;
+  align-items:center;
   margin:4rem 0;
+}
+
+@media (min-width:768px){
+  .card_div{
+    flex-direction:column;
+  }
 }
 
 .card{
