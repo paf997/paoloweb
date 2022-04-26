@@ -171,7 +171,7 @@ textarea, input, .submit{
 
 @media (max-width:480px){
   #about{
-    top:53%;
+    top:55%;
     left:0;
   }
 }
@@ -383,12 +383,12 @@ textarea, input, .submit{
   width:100%;
   display:flex;
   justify-content: space-between;
-  
   align-items:center;
   margin:4rem 0;
+  column-gap: 10px;
 }
 
-@media (min-width:768px){
+@media (max-width:860px){
   .card_div{
     flex-direction:column;
     row-gap: 35px;
@@ -408,7 +408,7 @@ textarea, input, .submit{
   flex-direction: column;
   color:white;
   height: 300px;
-  width: 350px;
+  width: 325px;
   transition: all .5s ease-in-out;
   align-items: center;
   position:relative;
@@ -478,6 +478,12 @@ textarea, input, .submit{
   opacity:.9;
 }
 
+@media (max-width:480px){
+  .form{
+    grid-template-columns: 100px 100px;
+  }
+}
+
 .name, .email, .msg, .submit{
   border-radius: 10px;
   background-color:white;
@@ -502,6 +508,12 @@ textarea, input, .submit{
   transition: all ease-in-out .8s;
   background-color:var(--denim);/* rgba(245, 50, 64, .8); */
   color:white;
+}
+
+@media (max-width:480px){
+  .submit{
+    grid-column: 1/3;
+  }
 }
 
 #contact{
@@ -535,6 +547,13 @@ textarea, input, .submit{
   background-color: var(--light-blue);
   color:white;
   padding:2rem 2rem;
+}
+
+@media (max-width:480px){
+  .green_bgc_denim_txt>div{
+    font-size: 36px;
+    margin-bottom: 20px;
+  }
 }
 
 .blue_bgc_white_txt{
