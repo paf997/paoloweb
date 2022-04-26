@@ -108,6 +108,12 @@ textarea, input, .submit{
   color:black;
 }
 
+@media (max-width:480px){
+  .beach-photo{
+    object-fit: cover;
+  }
+}
+
 .top{
   color:/*#CF6766;*/var(--alt-text);
   font-size: 48px;
@@ -163,6 +169,13 @@ textarea, input, .submit{
   }
 }
 
+@media (max-width:480px){
+  #about{
+    top:53%;
+    left:0;
+  }
+}
+
 .about-1,.about-2{
   background-color: greenyellow;
   display: inline;
@@ -184,6 +197,15 @@ textarea, input, .submit{
     }
 }
 
+@media (max-width:480px){
+  .about-1{
+    font-size: 24px;
+    width:60%;
+    margin-left:auto;
+    margin-right:auto;
+  }
+}
+
 .about-2{
   /*background-color: var(--red-theme);*/
   margin:3rem 4rem;
@@ -200,14 +222,23 @@ textarea, input, .submit{
   }
 }
 
-@keyframes ciao-full {
-  from {left:-12%; transform: rotate(0deg)}
-  to {left:27%; transform:rotate(360deg)}
+@media (max-width:480px){
+  .about-2{
+    width:60%;
+    padding:1rem 1rem;
+    margin-left:auto;
+    margin-right:auto;
+  }
 }
 
 @keyframes ciao-full {
   from {left:-12%; transform: rotate(0deg)}
   to {left:27%; transform:rotate(360deg)}
+}
+
+@keyframes ciao-480 {
+  from {left:-100%; transform: rotate(0deg)}
+  to {left:10%; transform:rotate(360deg)}
 }
 
 .ciao{
@@ -215,6 +246,12 @@ textarea, input, .submit{
   animation-name: ciao-full;
   animation-duration:1s;
   animation-fill-mode:forwards;
+}
+
+@media (max-width:480px){
+  .ciao{
+    animation-name:ciao-480;
+  }
 }
 
 /*@keyframes myname {
@@ -234,25 +271,39 @@ textarea, input, .submit{
   opacity:0;
 }
 
+@media (max-width:480px){
+  .myname{
+    left:47%;
+    top:70px;
+    width:180px;
+    height:180px;
+  }
+}
+
 @keyframes thanks-full{
-from {left:-30%; transform: rotate(0deg)}
-to {left:33%; transform:rotate(360deg)}
+  from {left:-30%; transform: rotate(0deg)}
+  to {left:33%; transform:rotate(360deg)}
 }
 
 @keyframes thanks-768{
   from {left:-30%; transform: rotate(0deg)}
   to {left:27%; transform:rotate(360deg)}
-  }
+}
+
+@keyframes thanks-480{
+  from {left:-100%; transform: rotate(0deg)}
+  to {left:20%; transform:rotate(360deg)}
+}
 
 .thanks{
-  height:275px;
-  width:275px;
+  height:250px;
+  width:250px;
   animation-duration:1s;
   animation-delay: 2s;
   animation-name: thanks-full;
   animation-fill-mode:forwards;
   font-size: 40px;
-  left:-30%;
+  left:-100%;
   top:16%;
   font-size:68px
 }
@@ -260,6 +311,13 @@ to {left:33%; transform:rotate(360deg)}
 @media (min-width:768px){
   .thanks{
     animation-name: thanks-768;
+  }
+}
+
+@media (max-width:480px){
+  .thanks{
+    top:20%;
+    animation-name: thanks-480;
   }
 }
 
@@ -298,24 +356,14 @@ to {left:33%; transform:rotate(360deg)}
   animation-name: header-full;
   animation-fill-mode: forwards;
   animation-duration: 1s;
-  animation-delay: 1s;
+  animation-delay: 2s;
   bottom:40%;
-}
-
-@media (max-width:768px){
-  .header_links{
-  animation-name:header-768;
-  }
+  transform:translateX(150%);
 }
 
 @keyframes header-full {
   from{ transform:translateX(100%)}
   to{transform:translateX(0%)}
-}
-
-@keyframes header-768 {
-  from{ right:-100px}
-  to{right:48px}
 }
 
 .hide_head{
@@ -503,6 +551,12 @@ to {left:33%; transform:rotate(360deg)}
 
 .extra_padding{
   padding:4rem 6rem;
+}
+
+@media (max-width:480px){
+  .extra_padding{
+    padding:2rem 3rem;
+  }
 }
 
 .extra_vertical{
