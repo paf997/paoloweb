@@ -34,12 +34,11 @@ function Home (props) {
 
     const submit = async(event) =>{
         event.preventDefault();
-        /*await postSubmission();*/
+        await postSubmission();
     };
 
     const switch_color_modes = () => {
       set_color_mode((prev => !prev));
-      console.log("color mode!!!");
     };
 
     return(
@@ -53,10 +52,9 @@ function Home (props) {
             <p className="thanks">Paolo</p>
             <div id="about">
                 <p className="about-1">I am a Progammer and Web Developer</p>
-                <p className="about-2 blue_bgc_white_txt extra_padding">Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
-                Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, 
-                when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, 
-                but also the leap into electronic typesetting, remaining essentially unchanged. </p>
+                <p className="about-2 blue_bgc_white_txt extra_padding"> I gragduated from the University of Saskatchewan with 
+                CS degree in 2020.  Since then have been working as a freelance developer.  I love creating fast, responsive and beautiful 
+                looking websites</p>
             </div>
         </div>
 
